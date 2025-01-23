@@ -1,0 +1,29 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:ProductionControlSystem.UI.ViewModels"
+    xmlns:core="clr-namespace:ProductionControlSystem.Core.Models;assembly=ProductionControlSystem.Core"
+    x:Class="ProductionControlSystem.UI.MainWindow"
+    x:DataType="vm:MainWindowViewModel"
+    Title="Production Control System"
+    Width="800" Height="600">
+
+  <StackPanel Margin="10" Spacing="10">
+    <TextBlock Text="Production Control System" FontSize="20" />
+
+    <!-- Compiled binding to 'Clients' on MainWindowViewModel, 
+         but using ItemsSource (type: IEnumerable) instead of Items (type: object) -->
+    <ItemsControl ItemsSource="{CompiledBinding Clients}">
+      <ItemsControl.ItemTemplate>
+        <!-- Each item is a 'Client' model, so x:DataType="core:Client" -->
+        <DataTemplate x:DataType="core:Client">
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="{CompiledBinding ClientCode}" />
+            <TextBlock Text=" - " />
+            <TextBlock Text="{CompiledBinding Name}" />
+          </StackPanel>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+  </StackPanel>
+</Window>

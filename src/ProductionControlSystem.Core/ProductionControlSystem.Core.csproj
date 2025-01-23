@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+<ItemGroup>
+  <!-- Both lines should be present (or automatically resolved) -->
+  <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.0" />
+  <PackageReference Include="ReactiveUI" Version="18.3.1" />
+</ItemGroup>
+
+
+
+
+</Project>
