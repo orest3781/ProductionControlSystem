@@ -1,12 +1,9 @@
 <Application
+    x:Class="ProductionControlSystem.UI.App"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    x:Class="ProductionControlSystem.UI.App">
-
+>
   <Application.Styles>
-    <!-- Use FluentTheme without specifying Mode/RequestedTheme -->
     <FluentTheme />
   </Application.Styles>
-
 </Application>
-

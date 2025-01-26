@@ -10,7 +10,8 @@
 
   <StackPanel Margin="10" Spacing="10">
     <TextBlock Text="Production Control System" FontSize="20" />
-
+    <TextBlock Text="Production Control System" FontSize="10" />
+    <TextBlock Text="Hello from Avalonia!" Foreground="Red" />
     <!-- Compiled binding to 'Clients' on MainWindowViewModel, 
          but using ItemsSource (type: IEnumerable) instead of Items (type: object) -->
     <ItemsControl ItemsSource="{CompiledBinding Clients}">
